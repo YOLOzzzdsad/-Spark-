@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: linear-gradient(to right, #fbc2eb, #a6c1ee);
+}
+
+nav {
+    overflow: hidden;
+    position: relative;
+    transform: translateX(-300px);
+    height: 100%;
+    width: 400px;
+    transition: all 800ms cubic-bezier(.8, 0, .33, 1);
+    border-radius: 0% 0% 100% 50%;
+}
+
+nav.nav-open {
+    transform: translateX(0px);
+    border-radius: 0% 0% 0% 0%;
+	 background: rgba(255, 255, 255, 0.6);
+}
+
+nav .menu-btn {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    padding: 0;
+    width: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+nav .menu-btn .line {
+    padding: 0;
+    width: 30px;
+    background: #000000;
+    height: 2px;
+    margin: 5px 0;
+    transition: all 700ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .menu-btn .line.line--1 {
+    width: 30px;
+    transform: rotate(0) translateY(0);
+}
+
+nav .menu-btn .line.line--1.line-cross {
+    width: 30px;
+    transform: rotate(45deg) translateY(10px);
+	 background: rgba(0,0,0,0.6);
+}
+
+nav .menu-btn .line.line--2 {
+    width: 28px;
+    transform: translateX(0);
+}
+
+nav .menu-btn .line.line--2.line-fade-out {
+    width: 28px;
+    transform: translate(30px);
+    opacity: 0;
+}
+
+nav .menu-btn .line.line--3 {
+    width: 20px;
+    transform: rotate(0) translateY(0);
+}
+
+nav .menu-btn .line.line--3.line-cross {
+    width: 30px;
+    transform: rotate(-45deg) translateY(-10px);
+	 background: rgba(0,0,0,0.6);
+}
+
+nav .nav-links {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 900ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .nav-links.fade-in {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+nav .nav-links .link {
+    margin: 20px 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: rgba(0,0,0,0.9);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: all 300ms cubic-bezier(.9, 0, .33, 1);
+}
+
+nav .nav-links .link:hover {
+    color: rgba(0, 0, 0, .5);
+}
+
+
+.inform{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #000000;
+	font-size: 2rem;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+.general{
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	width:1200px;
+	height:500px;
+}
+
+a{
+	margin: 0 20px;
+	color: #fff;
+	font-size: 2rem;
+	transition: all 400ms ease;
+}
+
+a:hover{
+	color: #222;
+}
